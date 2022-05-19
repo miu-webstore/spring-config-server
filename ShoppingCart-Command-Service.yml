@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka
+
+spring:
+  data:
+  mongodb:
+    host: localhost
+    port: 27017
+    database: final
+    auto-index-creation: true
+  kafka:
+    bootstrap-servers: http://localhost:9092
+  zipkin:
+    base-url: http://localhost:9411/
+
+sleuth:
+  sampler:
+     probability: 1

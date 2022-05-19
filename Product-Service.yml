@@ -1,0 +1,33 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka
+
+spring:
+  zipkin:
+    base-url: http://localhost:9411/
+sleuth:
+  sampler:
+    probability: 1
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: webstore
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+logging.logstash:
+  enabled: true
+  logheaders: true
+  url: http://localhost:5000
+logging:
+  file:
+    path: /home/sam/Documents/SA/Final\ Project/webstore/logs
+    name: app_log.log
